@@ -47,7 +47,8 @@ src/
 ├── routes/              # API Route definitions
 ├── utils/               # Helper functions (Date formatter, Hash)
 ├── types/               # TypeScript interfaces
-└── app.ts / server.ts   # Entry point
+├── app.ts               # Entry point
+└── server.ts            # Entry point run server
 ```
 - [ ] **Global Error Handling:**
     - [ ] สร้าง Custom Error Class (AppError) ที่ระบุ StatusCode ได้
