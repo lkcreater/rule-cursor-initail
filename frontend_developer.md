@@ -62,3 +62,32 @@ src/
 ├── styles/              # Global CSS, Tailwind Config
 ├── types/               # Global TypeScript Interfaces
 └── utils/               # Pure functions (formatDate, currency)
+```
+- [ ] **Module Aliases:** ตั้งค่า `tsconfig.json` ให้ใช้ `@/components/...` แทน `../../components/...`
+
+## Phase 5: Core Libraries Integration (เชื่อมต่อระบบหลัก)
+*วางระบบท่อประปาและไฟฟ้า*
+
+- [ ] **Styling System:**
+    - [ ] Setup **Tailwind CSS** (หรือ CSS-in-JS library)
+    - [ ] นำ **Design Tokens** (สี, ฟอนต์) จากข้อ 1 มาใส่ใน `tailwind.config.js`
+- [ ] **Networking / API Client:**
+    - [ ] Setup **Axios Instance** (หรือ Fetch wrapper)
+    - [ ] **Interceptors:** ดักจับ Request (ใส่ Token) และ Response (จัดการ 401 Unauthorized/Logout อัตโนมัติ)
+- [ ] **State Management Strategy:**
+    - [ ] **Server State:** ใช้ React Query (TanStack Query) หรือ SWR (เลิกใช้ `useEffect` ดึงข้อมูลตรงๆ)
+    - [ ] **Client State:** ใช้ Zustand, Context API, หรือ Redux Toolkit สำหรับ UI State
+- [ ] **Routing & Guards:**
+    - [ ] สร้าง PrivateRoute / ProtectedRoute Component
+    - [ ] จัดการ Redirect กรณีไม่มีสิทธิ์เข้าถึง
+
+## Phase 6: Development Experience (DX)
+*ทำให้ชีวิตคนเขียน Code ง่ายขึ้น*
+
+- [ ] **Create Common Components:** สร้างปุ่ม, Input, Modal, Card เตรียมไว้ก่อนเริ่มทำหน้าจริง
+- [ ] **Mocking API:** เตรียม MSW (Mock Service Worker) หรือ Mock JSON สำหรับกรณี Backend ยังไม่เสร็จ
+- [ ] **README.md:** เขียนวิธีการ Run, Build, และโครงสร้างโปรเจกต์ให้เพื่อนร่วมทีมอ่าน
+
+---
+
+> **💡 Pro Tip:** หัวใจสำคัญของ Frontend ยุคใหม่คือ **"Separation of Concerns"** พยายามแยก Logic (Hooks/Services) ออกจาก UI (JSX/TSX) เสมอ จะทำให้ Code อ่านง่ายและ Test ง่ายครับ
